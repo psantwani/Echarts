@@ -8,13 +8,38 @@ export default {
     
       chart_2_query: async() => {
         return {
-            legendData: ['Netbanking','Cards','Wallet','Card Vaults','Others'],
+            legendData: ['Name','Place','Animal','Thing','Others'],
             seriesData: [
-                {value:335, name:'Netbanking'},
-                {value:310, name:'Cards'},
-                {value:234, name:'Wallet'},
-                {value:135, name:'Card Vaults'},
+                {value:335, name:'Piyush'},
+                {value:310, name:'New Zeland'},
+                {value:234, name:'Panda'},
+                {value:135, name:'Money'},
                 {value:1548, name:'Others'}
+            ]
+        };
+      },
+
+      chart_3_query: async() => {
+        return {
+            columns: [{
+                Header: "First Name",
+                accessor: "firstName"
+            },
+            {
+                Header: "Last Name",
+                id: "lastName",
+                accessor: d => d.lastName
+            },
+            {
+                Header: "Age",
+                id: "age",
+                accessor: d => d.age
+            },
+            ],
+            tableData: [
+                {firstName: "Piyush", lastName: "Santwani", age:"26"},
+                {firstName: "Supriti", lastName: "Shukla", age:"26"},
+                {firstName: "Anuj", lastName: "Gupta", age:"24"}
             ]
         };
       }

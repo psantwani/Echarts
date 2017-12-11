@@ -10,7 +10,10 @@ export default class LineChart extends Component {
             left: 'center'
         },
         tooltip: {
-            trigger: 'item',
+            trigger: 'none',
+            textStyle: {
+                color: '#000'
+            },
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         legend: {
